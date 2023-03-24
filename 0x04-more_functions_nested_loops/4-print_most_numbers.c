@@ -1,26 +1,22 @@
 #include "main.h"
 
 /**
- * print_most_numbers - print the numbers since 0 up to 9
- * Description: Prints the numbers excluding 2 and 4
- * Return: The numbers since 0 up to 9
+ * _isalpha - Shows 1 if the input is a
+ * letter Another cases, shows 0
+ *
+ * @c: The character in ASCII code
+ *
+ * Return: 1 for  letters. 0 for the rest.
  */
-
-void print_most_numbers(void);
+int _isalpha(int c)
 {
-
-	int x = 0;
-
-	for (; x <= 9; x++)
+	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
 	{
-	if (x == 2  || x == 4)
-	{
-	continue;
+		return (1);
 	}
 	else
 	{
-	_putchar(x + '0');
-	}
+		return (0);
 	}
 	_putchar('\n');
 }
